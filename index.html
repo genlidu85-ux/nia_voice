@@ -369,6 +369,13 @@
   audio.currentTime = 0;
   audio.play().catch(e => console.log(e));
         }
+                function playSound(id) {
+  const audio = document.getElementById(id);
+  if (!audio) return;
+
+  audio.currentTime = 0;
+  audio.play().catch(e => console.log(e));
+        }
     function playSound(id) {
   const audios = document.querySelectorAll("audio");
   audios.forEach(a => {

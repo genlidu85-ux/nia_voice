@@ -372,6 +372,13 @@
     const audio = document.getElementById(id);
     audio.play();
 }
+        function playSound(id) {
+  const audio = document.getElementById(id);
+  if (!audio) return;
+
+  audio.currentTime = 0;
+  audio.play().catch(e => console.log(e));
+}
       </script>
 
 </body>
